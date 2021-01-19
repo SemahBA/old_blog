@@ -22,6 +22,7 @@ interests:
 - Cryptography
 - Forensics
 - Penetration Testing
+- Web Development
 
 # Education to show in About widget
 education:
