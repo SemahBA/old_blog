@@ -34,19 +34,7 @@ experience:
         * Developing a penetration testing platform
         * Setting up Linux machines for penetration testing
         * Deploying the platform and the machines
-        
-  - title: Internship
-    company: NextStep
-    company_url: 'https://www.nextstep-it.com/'
-    location: Tunisia
-    date_start: '2020-09-17'
-    date_end: 'Present'
-    description: |2-
-        Responsibilities include:
-        
-        * Developing a Sandboxing Tools
-        * Malware Analysis
-        
+
   - title: Technical Director
     company: Securinets
     company_url: 'https://securinets.com/'
