@@ -9,7 +9,7 @@ item:
     description: Achieved 2nd place in CSAW MENA 2020 CTF(Middle East North Africa) after 48h long competition
     organization: null
     organization_url: null
-    title: 2nd place CSAW MENA 2020 (10/2020)
+    title: 2nd place CSAW MENA(Middle East North Africa) 2020 (10/2020)
     url: ""
   - certificate_url: null
     date_end: 2020-12-01
