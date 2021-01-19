@@ -33,20 +33,19 @@ experience:
         
         * Developing a penetration testing platform
         * Setting up Linux machines for penetration testing
-        * Deploying the platform and the machine
+        * Deploying the platform and the machines
         
-  - title: Internshipp
+  - title: Internship
     company: NextStep
-    company_url: 'https://www.athena-experts.com/index.php/en/home/'
+    company_url: 'https://www.nextstep-it.com/'
     location: Tunisia
-    date_start: '2020-09-14'
+    date_start: '2020-09-17'
     date_end: 'Present'
     description: |2-
         Responsibilities include:
         
         * Developing a Sandboxing Tools
         * Malware Analysis
-        
         
   - title: Technical Director
     company: Securinets
@@ -61,16 +60,16 @@ experience:
         * Setting up the infrastructure for the CTFs
         * Supervising a Custom Malware Devlopment
         * Managing the technical team and preparing workshops
-        
 
-  - title: CTF Player @[Fword](https://twitter.com/FwordTeam)
+  - title: CTF Player
     company: Fword
-    company_url: 'https://fword.wtf/'
+    company_url: 'https://twitter.com/fwordteam'
     location: Tunisia
     date_start: '2018-01-04'
-    date_end: 'Present'
+    date_end: ''
     description: |2-
         Responsibilities include:
+        
         * Learned alot about Cybersecurity
         * Enhanced my skils in Cryptography and Digital Forensics
         * Learned more about Penetration Testing
