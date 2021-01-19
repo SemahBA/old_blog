@@ -6,7 +6,7 @@ title: Semah BenAli
 superuser: true
 
 # Role/position/tagline
-role: Cybersecurity Student
+role: Cybersecurity Student - CTF Player @[Fword](https://twitter.com/FwordTeam)
 
 # Organizations/Affiliations to show in About widget
 organizations:
