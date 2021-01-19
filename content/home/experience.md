@@ -35,7 +35,7 @@ experience:
         * Setting up Linux machines for penetration testing
         * Deploying the platform and the machine
         
-  - title: Internship
+  - title: Internshipp
     company: NextStep
     company_url: 'https://www.athena-experts.com/index.php/en/home/'
     location: Tunisia
@@ -71,7 +71,6 @@ experience:
     date_end: 'Present'
     description: |2-
         Responsibilities include:
-        
         * Learned alot about Cybersecurity
         * Enhanced my skils in Cryptography and Digital Forensics
         * Learned more about Penetration Testing
