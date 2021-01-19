@@ -48,7 +48,19 @@ experience:
         * Setting up the infrastructure for the CTFs
         * Supervising a Custom Malware Devlopment
         * Managing the technical team and preparing workshops
-
+ 
+  - title: Internsip
+    company: NextStep
+    company_url : https://www.nextstep-it.com/
+    location: Tunisia
+    date_start: '2020-09-14'
+    date_end : ''
+    description: |2-
+        Responsibilities include:
+      
+        * Developing a Sandboxing Tools
+        * Malware Analysis
+      
   - title: CTF Player
     company: Fword
     company_url: 'https://twitter.com/fwordteam'
