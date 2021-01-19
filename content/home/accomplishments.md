@@ -40,13 +40,14 @@ item:
     organization_url: null
     title: Ranked among the top 60 teams in the world in CTFs (2019 - 2020)
     url: https://ctftime.org/team/72251
-  - cerficicate_url : null
-    date_end: ''
-    date_start: ''
+  - cerficate_url : null
+    date_end: ""
+    date_start: ""
     description: Achieved 3rd place in Local competition organized by National Operator Tunisie Telecom
     orgnaization: null
     organization_url: null
-    title : 3rd Place TT CTF
+    title: 3rd Place TT CTF
+    url: ""
 widget_id: accomplishments
 headless: true
 weight: 50
