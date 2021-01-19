@@ -64,6 +64,6 @@ email: ""
 highlight_name: false
 ---
 
-I am Semah Ben Ali, Tunisian cybersecurity enthusiast, co-founder and leader of Fword Team, an international CTF team ranked 2nd nationally and among top 50 worldwide. I also manage all the cybersecurity-related activities within the National Cybersecurity Association SecuriNets. Always curious about learning new fields, my current fields of strength cover basically cryptography and forensics. Having held multiple trainings in cybersecurity for various university students, I believe that spreading cybersecurity knowledge is a duty for every cybersecurity professional. I'm in love with Chaima Tounsi.
+I am Semah Ben Ali, Tunisian cybersecurity enthusiast, co-founder and leader of Fword Team, an international CTF team ranked 2nd nationally and among top 50 worldwide. I also manage all the cybersecurity-related activities within the National Cybersecurity Association SecuriNets. Always curious about learning new fields, my current fields of strength cover basically cryptography and forensics. Having held multiple trainings in cybersecurity for various university students, I believe that spreading cybersecurity knowledge is a duty for every cybersecurity professional.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
