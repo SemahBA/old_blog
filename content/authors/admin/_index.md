@@ -27,7 +27,7 @@ interests:
 # Education to show in About widget
 education:
   courses:
-  - course: Computer Science and Network Engineering
+  - course: Networking and Information Security
     institution: INSAT
     year: 2022
 
