@@ -3,7 +3,7 @@ title: FwordCTF2020 - Writeups of my challenges
 subtitle: I'm presenting to you the writeups of the challenges i managed to create during FwordCTF2020.
 
 # Summary for listings and search engines
-summary: Cryptography-Forensics-Reverse-Misc
+summary: I'm presenting to you the writeups of the challenges i managed to create during FwordCTF2020.
 # Link this post with a project
 projects: []
 
