@@ -8,10 +8,10 @@ summary: Cryptography-Forensics-Reverse-Misc
 projects: []
 
 # Date published
-date: "2021-01-22T00:00:00Z"
+date: "2021-01-19T00:00:00Z"
 
 # Date updated
-lastmod: "2021-01-223T00:00:00Z"
+lastmod: "2021-01-193T00:00:00Z"
 
 # Is this an unpublished draft?
 draft: false
