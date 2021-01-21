@@ -42,8 +42,6 @@ categories:
 ---
 # FwordCTF2020
 
-## Overview
-
 ```
 Title                      Category             Points  Flag
 -------------------------- -------------------  ------- -----------------------------
@@ -58,7 +56,7 @@ Repeat                    Misc                   493     FwordCTF{repetition_cod
 Infection                 Forensics(DiskImage)   498     FwordCTF{32d6c684f1e93d0ba67d4c865f1f757f}
 ```
 
-## BG & BD ! |Cryptography : 496pts
+# BG & BD ! |Cryptography : 496pts
 
 _**Description :**_ 
 
@@ -68,4 +66,217 @@ Author: Semah BA
 
 [Challenge file ](BGBD.py)
 
+## TL;DR:
+  1. e,n ~length, use wiener attack and decrypt the first part
+  2. from wiener we can extract the primes to use for the second part
+  3. Second part: Blum goldwasser
+  
+## Overview
+### Startring with the first part : 
+Let's focus on enc1 which is simple RSA encryption. We have e and n ~ same length  which is exposed to wiener attack.
+For this purpose, applying the Wiener continued fraction attack :
+1. We try to find the continued fractions expansion of e/N
+2. Converts a rational x/y fraction into a list of partial quotients [a0, ..., an]
+3. Computes the list of convergents using the list of partial quotients
+4. For each convergent, we check if d is actually the key, check if the equation x^2 - s*x + n = 0  has integer roots with s = n-phi+1
 
+Code : 
+```python
+#!/usr/bin/python  
+
+def rational_to_contfrac(x,y):
+  a = x//y
+  pquotients = [a]
+  while a * y != x:
+    x,y = y,x-a*y
+    a = x//y
+    pquotients.append(a)
+  return pquotients
+
+def contfrac_to_rational (frac):
+  if len(frac) == 0:
+      return (0,1)
+  num = frac[-1]
+  denom = 1
+  for _ in range(-2,-len(frac)-1,-1):
+      num, denom = frac[_]*num+denom, num
+  return (num,denom)
+
+def convergents_from_contfrac(frac):
+  convs = [];
+  for i in range(len(frac)):
+    convs.append(contfrac_to_rational(frac[0:i]))
+  return convs
+
+def isqrt(n):
+  if n < 0:
+      raise ValueError('square root not defined for negative numbers')
+  if n == 0:
+      return 0
+  a, b = divmod(bitlength(n), 2)
+  x = 2**(a+b)
+  while True:
+      y = (x + n//x)//2
+      if y >= x:
+          return x
+      x = y
+
+def bitlength(x):
+  assert x >= 0
+  n = 0
+  while x > 0:
+      n = n+1
+      x = x>>1
+  return n
+
+def is_perfect_square(n):
+  h = n & 0xF
+  if h > 9:
+      return -1
+  if ( h != 2 and h != 3 and h != 5 and h != 6 and h != 7 and h != 8 ):
+      t = isqrt(n)
+      if t*t == n:
+          return t
+      else:
+          return -1
+  return -1
+
+def break_it(e,n):  
+  print "[+] Wiener attack in progress..."  
+  frac = rational_to_contfrac(e, n)  
+  convergents = convergents_from_contfrac(frac)  
+  for (k,d) in convergents:  
+    #check if d is actually the key  
+    if k!=0 and (e*d-1)%k == 0:  
+      phi = (e*d-1)//k 
+      s = n - phi + 1  
+      # check if the equation x^2 - s*x + n = 0  
+      # has integer roots  
+      discr = s*s - 4*n  
+      if(discr>=0):  
+        t = is_perfect_square(discr)  
+        if t!=-1 and (s+t)%2==0:  
+          print ("the value of phi : "+str(phi)) 
+          return "the value of d : "+str(d)  
+
+n=136925867715334350539351541819374303153581861883077425871381479619256902280896182751175418274848819117804106313526390171733172646719203781502341411544996240718046559322020330755493739123717974336861438650061159088512867158495809372652057009979517497499951599965613535967213529497308200114836792389883404448987
+e=17742461742896634972201474241931685701682825423273435469196581493593083245061146905518481601646582623355393811189032402488804067701439209191772750727581718922909269638936474927145555944487152988216781157681122522177270474504549932191814852246849976334482284151493985991827502940015843682072459462031659332887
+print (break_it(e,n))
+```
+simple RSA decryption : m=pow(c,d,n) , we get the first part of the flag : **well its not a long story to be told , you are on the right path , after darkness you find** 
+
+### Jumping to the second part : 
+```python
+def encode(msg):
+	enc_msg=""
+	for i in msg:
+		enc_msg+=bin(ord(i))[2:].zfill(8)
+	return enc_msg
+
+def enc2(msg,bs,mds):
+	while len(msg)%bs!=0:
+		msg='0'+msg
+	ll=len(msg)/bs
+	r=3945132
+	x=pow(r,2,mds)
+	c = ''
+	for i in range(ll):
+		x=pow(x,2,mds)
+		p=(bin(x)[2:])[-bs:]
+		c_i=int(p,2)^int(msg[i*bs:(i+1)*bs],2)
+		ci_bin = format(c_i, '0' + str(bs) + 'b')
+		c+=ci_bin
+	return c,pow(x,2,mds)
+  ```
+  
+  It's [Blum Goldwasser](https://en.wikipedia.org/wiki/Blum%E2%80%93Goldwasser_cryptosystem). But before starting decrypting, we need to retrieve the values of p2 and q2.  
+Since we got phi and we have n it's now easy get p1,q1 which it leads to p2 and q2.  
+**retrieving p1 and q1 from n and phi**
+
+n = p*q
+
+phi = (p-1)*(q-1) = n - p - q -1  => p + q = n - phi + 1 let's call this s
+
+Now recall that in a quadratic equation : x**2 - sx  + prod = 0
+
+```python
+from sympy import * 
+n  = 
+phi = 
+x = var('x')
+p,q = solve(x**2-s*x+n)
+``` 
+
+Back to Blum Goldwasser, following wikipedia decryption part : 
+![](https://i.imgur.com/WLH2VRi.png) 
+
+```python
+from Crypto.Util.number import *
+import math
+from sympy import lcm 
+import random
+from fractions import gcd 
+from sympy import nextprime
+from pwn import xor
+
+def verify_keys(a,b):
+	while True:
+		if a%4==3:
+			while b%4!=3:
+				b=nextprime(b)
+			return a,b
+		if b%4==3:
+			while a%4!=3:
+				a=nextprime(a)
+			return a,b
+		a,b=nextprime(a),nextprime(b)
+
+def xgcd(a, b):
+	x0, x1, y0, y1 = 0, 1, 1, 0
+	while a != 0:
+		(q, a), b = divmod(b, a), a
+		y0, y1 = y1, y0 - q * y1
+		x0, x1 = x1, x0 - q * x1
+	return b, x0, y0
+
+def dec2(p,q,x,c,bs):
+	nn=p*q
+	t=len(c)/bs
+	dp=pow((p+1)/4,82,p-1)
+	dq=pow((q+1)/4,82,q-1)
+
+	up=pow(x,dp,p)
+	uq=pow(x,dq,q)
+	_,rp,rq=xgcd(p,q)
+	x0=(uq*rp*p+up*rq*q)%(p*q)
+	xi=x0
+	m=''
+	for i in range(t):
+		ci=c[i*bs:(i+1)*bs]
+		xi=(xi**2)%nn
+		xi_bin=bin(xi)
+		pi=xi_bin[-bs:]
+		ci_int = int(ci,2)
+		pi_int = int(pi,2)
+		mi = pi_int ^ ci_int
+		mi_bin = format(mi, '0' + str(bs) + 'b')
+		m+=mi_bin
+
+	return m
+cipher2,xt = '101110100011010000110010100100000011001110110001010101100101000000100111011010010010110101000101000110000100011001001100111011111011101001110111100001100011101010101111101100001000010111111000110110110010110100000001001011100010011000110100111100001100111001101110001111001100010001001111100110110110100001011100011100110101001000011100100011011110011000010100110010100111000010101101110101011100010110000100001101101101001111000101011100101100100110110011101000100010101000010001010010110110101011111101110011101110010000101001000111000000100100001010110111001011110001010100100001101111010010111101111001001001111010001100000111000010000100110101100010001111100011111100100100001010010100111010100010000101110000110101000101100', 99938901144293305318474508248429453175561082362898230514299720558762394911631823304146558717537729838080951066313213321374755623652896593453644503184122276925455269140340267427068200657877772040554093186417385902385500879519631051754226252925525926019109245833691317900888626583890623823019289563531254979763
+p_1=11391686090403905599695015583829755003551766728158057028281938682097322841603835874354540607209988671617182359012432600907514677996087087987893334356043831
+q_1=12019806956467800913778611206246062087922374347970383926984004278168670921911203657163080865199043522716298571169006826814578568813815787765574990776254077
+p_2,q_2=verify_keys(p_1,q_1)
+N=p_2*q_2
+block_size=int((math.log(int(math.log(N,2)),2)))
+dec=dec2(p_2,q_2,xt,cipher2,block_size)[1:]
+
+flag=""
+try:
+	for i in range(len(dec)):
+		flag+=chr(int(dec[i*8:(i+1)*8],2))
+except:
+	print (flag)
+```
+flag : the fire to light up your way ! your fire is FwordCTF{boneh_and_blum?_mix3d_but_good_j0b!!}
+***flag : FwordCTF{boneh_and_blum?_mix3d_but_good_j0b!!}***
