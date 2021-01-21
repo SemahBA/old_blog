@@ -1,5 +1,5 @@
 ---
-title: FwordCTF2020 - Wirteups of my challenges
+title: FwordCTF2020 - Writeups of my challenges
 subtitle: I'm presenting to you the writeups of the challenges i managed to create during FwordCTF2020.
 
 # Summary for listings and search engines
