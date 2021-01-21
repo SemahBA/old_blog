@@ -22,7 +22,7 @@ featured: false
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
-  caption: 'Image credit: [**Unsplash**](https://i.imgur.com/sGWRNo1.png)'
+  caption: ''
   focal_point: ""
   placement: 2
   preview_only: false
@@ -57,5 +57,15 @@ TwisTwisLitlleStar        Misc                   470     FwordCTF{R4nd0m_isnT_R4
 Repeat                    Misc                   493     FwordCTF{repetition_code_is_the_way_to_send_a_message_without_corruption}
 Infection                 Forensics(DiskImage)   498     FwordCTF{32d6c684f1e93d0ba67d4c865f1f757f}
 ```
+
+## BG & BD ! |Cryptography : 496pts
+
+_**Description :**_ 
+
+Best Gift and Best Day !
+
+Author: Semah BA
+
+[Challenge file ](BGBD.py)
 
 
