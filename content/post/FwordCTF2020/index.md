@@ -279,7 +279,8 @@ try:
 except:
 	print (flag)
 ```
-second part of the message : the fire to light up your way ! your fire is FwordCTF{boneh_and_blum?_mix3d_but_good_j0b!!}
-Full message : well its not a long story to be told , you are on the right path , after darkness you find the fire to light up your way ! your fire is FwordCTF{boneh_and_blum?_mix3d_but_good_j0b!!}"
+Second part of the message : the fire to light up your way ! your fire is FwordCTF{boneh_and_blum?_mix3d_but_good_j0b!!}
+
+Full message : ***well its not a long story to be told , you are on the right path , after darkness you find the fire to light up your way ! your fire is FwordCTF{boneh_and_blum?_mix3d_but_good_j0b!!}"***
 
 ***flag : FwordCTF{boneh_and_blum?_mix3d_but_good_j0b!!}***
