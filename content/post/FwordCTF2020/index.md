@@ -163,7 +163,7 @@ n=136925867715334350539351541819374303153581861883077425871381479619256902280896
 e=17742461742896634972201474241931685701682825423273435469196581493593083245061146905518481601646582623355393811189032402488804067701439209191772750727581718922909269638936474927145555944487152988216781157681122522177270474504549932191814852246849976334482284151493985991827502940015843682072459462031659332887
 print (break_it(e,n))
 ```
-simple RSA decryption : m=pow(c,d,n) , we get the first part of the flag : **well its not a long story to be told , you are on the right path , after darkness you find** 
+simple RSA decryption : m=pow(c,d,n) , we get the first part of the message : **well its not a long story to be told , you are on the right path , after darkness you find** 
 
 ### Jumping to the second part : 
 ```python
@@ -190,7 +190,7 @@ def enc2(msg,bs,mds):
   ```
   
   It's [Blum Goldwasser](https://en.wikipedia.org/wiki/Blum%E2%80%93Goldwasser_cryptosystem). But before starting decrypting, we need to retrieve the values of p2 and q2.  
-Since we got phi and we have n it's now easy get p1,q1 which it leads to p2 and q2.  
+Since we got phi and we have n it's now easy get p1,q1 which leads to p2 and q2.  
 **retrieving p1 and q1 from n and phi**
 
 n = p*q
