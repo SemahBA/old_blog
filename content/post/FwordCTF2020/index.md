@@ -1,6 +1,6 @@
 ---
 title: FwordCTF2020 - Wirteups of my challenges
-subtitle:I'm presenting to you the writeups of the challenges i managed to create during FwordCTF2020. Categories : Cryptography-Forensics-Misc-Reverse.
+subtitle: I'm presenting to you the writeups of the challenges i managed to create during FwordCTF2020. Categories : Cryptography-Forensics-Misc-Reverse.
 
 # Summary for listings and search engines
 summary: Cryptography-Forensics-Reverse-Misc
