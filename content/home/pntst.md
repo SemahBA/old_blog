@@ -13,7 +13,7 @@ subtitle:
 
 content:
   # Page type to display. E.g. post, talk, publication...
-  page_type: post
+  page_type: pntst
   # Choose how many pages you would like to display (0 = all pages)
   count: 5
   # Default filter index (e.g. 0 corresponds to the first `filter_button` instance below).
