@@ -1,5 +1,5 @@
 ---
-title: HackTheBox Machine : Doctor (Linux)
+title: HackTheBox Machine - Doctor (Linux)
 subtitle: I'm presenting to you the walkthrough of the machine Doctor.
 
 # Summary for listings and search engines
@@ -31,6 +31,11 @@ authors:
 - SemahBA
 
 tags:
-- HackTheBox
-- Linux
+- hackthebox
+- linux
+
+categories:
+- Hackthebox
+
 ---
+# Doctor 
