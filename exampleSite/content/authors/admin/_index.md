@@ -14,7 +14,7 @@ organizations:
   url: https://www.stanford.edu/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: Cybersecurity enthusiastic, always seeking to learn more and stay updated.
 
 # Interests to show in About widget
 interests:
