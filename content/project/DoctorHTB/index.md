@@ -103,7 +103,7 @@ Whatever I typed in the **New message title field** it gets reflected in the /ar
  
  ![](https://i.imgur.com/VLuCM1c.png)
  
- Following the image , we get it's either Jinja2 or Twig. 
+ Following the image , we get it's either Jinja2 or Twig. But since it's a python application, It's pretty obvious that the template engine is Jinja2. 
 
 ## Gaining Reverse Shell
 
