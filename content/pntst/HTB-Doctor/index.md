@@ -8,10 +8,10 @@ summary: I'm presenting to you the walkthrough of the machine Doctor.
 projects: []
 
 # Date published
-date: "2021-02-06T00:00:00Z"
+date: "2021-02-05T00:00:00Z"
 
 # Date updated
-lastmod: "2021-02-063T00:00:00Z"
+lastmod: "2021-02-053T00:00:00Z"
 
 # Is this an unpublished draft?
 draft: false
