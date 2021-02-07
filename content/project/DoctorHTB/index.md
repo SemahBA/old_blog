@@ -99,7 +99,7 @@ Whatever I typed in the **New message title field** it gets reflected in the /ar
 
 **We know it's vulnerable to** [SSTI](https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection) ,  but we don’t know which template is being used here
 
- ### Identifying The Template
+ ### Identifying The Template Engine
  
  ![](https://i.imgur.com/VLuCM1c.png)
  
