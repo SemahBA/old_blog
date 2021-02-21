@@ -53,7 +53,7 @@ Foxyy News                  Forensics             500     Securinets{not_bad_for
 ![](https://i.imgur.com/Jb4wbZS.jpeg)
 
 Starting by downloading the challenge file. The first challenge asking for username,password and profile
-`` vol.py -f memdump.raw --imageinfo`` to get the image info.
+`` vol.py -f memdump.raw --imageinfo`` to get the Profile.
 
 for the user and password , you can use mimikatz plugin or hashdump and crack the hash using crackstation
 
