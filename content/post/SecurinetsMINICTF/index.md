@@ -8,10 +8,10 @@ summary: I'm presenting to you the writeups of the challenges i managed to creat
 projects: []
 
 # Date published
-date: "2021-02-21T00:00:00Z"
+date: "2021-02-20T00:00:00Z"
 
 # Date updated
-lastmod: "2021-02-213T00:00:00Z"
+lastmod: "2021-02-203T00:00:00Z"
 
 # Is this an unpublished draft?
 draft: false
