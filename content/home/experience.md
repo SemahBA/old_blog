@@ -71,6 +71,6 @@ experience:
         Responsibilities include:
         
         * Learned alot about Cybersecurity
-        * Enhanced my skils in Cryptography and Digital Forensics
+        * Enhanced my skills in Cryptography and Digital Forensics
         * Learned more about Penetration Testing
 ---
