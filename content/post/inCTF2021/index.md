@@ -43,7 +43,7 @@ categories:
 ```
 Title                      Category             Points        Flag
 -------------------------- -------------------  ------- -----------------------------
-Ermitllung                  Forensics             140     inctf{Outlook_Express_27-07-2020_12:26:17_4_6.0.2900.5512}
+Ermittlung                  Forensics             140     inctf{Outlook_Express_27-07-2020_12:26:17_4_6.0.2900.5512}
 
 ```
 
