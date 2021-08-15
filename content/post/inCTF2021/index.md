@@ -49,6 +49,18 @@ Ermitllung                  Forensics             140     inctf{Outlook_Express_
 
 # Ermittlung
 
+
+## TL;DR
+Chat Application Used -> finding msimn.exe process
+
+Last time the application was used -> userassist plugin and look for the binary
+
+How many unread messages -> Registry HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\UnreadMail\<email address>
+
+Version -> Registry HKEY_CURRENT_USER\Software\Microsoft\Outlook Express\5.0\Shared Settings\Setup
+
+## Challenge 
+
 ![](https://i.imgur.com/aEN08ni.png)
 
 Starting by downloading the challenge file.
