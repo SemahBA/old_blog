@@ -46,7 +46,7 @@ MAC                           Forensics           998     FwordCTF{x_xWhiteuxx_x
 eLearning                     Forensics           953     FwordCTF{SBA_192.168.1.9_dirsearch-nmap-wget_secret.txt_663cd2dfc9418f384d90c89a15319b3d}
 Crypt                         Forensics           856     FwordCTF{08202021-05:03_ctf.user_23b2e901f3c3c3827a70589efd046be8}
 BF                            Forensics           997     FwordCTF{f0r3n51c4_15n0t_4b0u7_70015_4f73r_411}
-listening?                    Forensics           738     FwordCTF{email_forensics_is_interesting_73489nn7n4891}
+listening                     Forensics           738     FwordCTF{email_forensics_is_interesting_73489nn7n4891}
 ```
 
 # FwordCTF2021 Stats
