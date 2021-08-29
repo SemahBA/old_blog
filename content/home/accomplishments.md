@@ -5,6 +5,15 @@ date_format: Jan 2006
 item:
   - certificate_url: null
     date_end: ""
+    date_start: 2021-08-20
+    description: Qualified to the finals which taking place in Egypt after 48h long competition and more than 500 participated teams.
+    organization: null
+    organization_url: null
+    title: Arab Security Cyber Wargames Championship Finalist.
+    url: ""
+
+  - certificate_url: null
+    date_end: ""
     date_start: 2020-10-07
     description: Achieved 2nd place in CSAW MENA 2020 CTF(Middle East North Africa) after 48h long competition
     organization: null
