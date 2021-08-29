@@ -57,6 +57,9 @@ listening?                    Forensics           738     FwordCTF{email_forensi
 
 ![](https://i.imgur.com/tS5rS5n.jpg)
 
+## Challenge File
+[LINK](https://drive.google.com/file/d/1D6otV4YRZY5ZLDja6pK2-czWhgvLjMK9/view?usp=sharing)
+
 ## TL;DR
 - Reading slack conversation
 
@@ -178,6 +181,9 @@ Flag is: **FwordCTF{x_xWhiteuxx_x-192.168.1.9-Downloads-657.exe-chromebot.py}**
 
 ![](https://i.imgur.com/JmfEb9a.jpeg)
 
+## Challenge File
+[LINK](https://drive.google.com/file/d/1tfcLMAbBWH-KBnkCDAboXAswm5fZuIed/view?usp=sharing)
+
 ## TL;DR
 
 1 - Installed Apps, There is zenmap, Mailbird
@@ -231,6 +237,9 @@ Flag is: **FwordCTF{SBA_192.168.1.9_dirsearch-nmap-wget_secret.txt_663cd2dfc9418
 # Crypt |Forensics - 40 Solves
 
 ![Description](https://i.imgur.com/bONs6u6.jpeg)
+
+## Challenge File
+[LINK](https://drive.google.com/drive/folders/11KSbrlsTUuhPmGRx5uDjyaJvIR-_gBO8?usp=sharing)
 
 ## TL;DR
 **1 -** Checking installed app, find thunderbird.
@@ -316,6 +325,9 @@ Flag : ``FwordCTF{08202021-05:03_ctf.user_23b2e901f3c3c3827a70589efd046be8}``
 
 Credit to [0xMohamedHassan](https://twitter.com/0xMohamedHassan) for the excellent Challenge \o/.
 
+## Challenge File
+[](https://drive.google.com/file/d/1FdF6k7RGNeE5ecxVyTBwRaRXc8VmeQ7p/view)
+
 ## TL;DR
 1. Check requests in the PCAP and find requests to cloudme which indicates cloudme software on the victim machine.
 
@@ -358,6 +370,9 @@ Flag : **FwordCTF{f0r3n51c4_15n0t_4b0u7_70015_4f73r_411}**
 ## Credit
 
 Credit to [0xMohamedHassan](https://twitter.com/0xMohamedHassan) for the excellent idea \o/ !
+
+## Challenge File
+[LINK](https://static.fword.tech/foren/challenge.pcap)
 
 ## TL;DR
 
