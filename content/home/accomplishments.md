@@ -5,6 +5,15 @@ date_format: Jan 2006
 item:
   - certificate_url: null
     date_end: ""
+    date_start: 2021-11-28
+    description: Being part of the authors team, helped in delivering Cryptography and Digital Forensics Challenges.
+    organization: null
+    organization_url: null
+    title: AtHack Challenge Creator.
+    url: ""
+    
+  - certificate_url: null
+    date_end: ""
     date_start: 2021-08-20
     description: Qualified to the finals which taking place in Egypt after 48h long competition and more than 500 participated teams.
     organization: null
@@ -14,11 +23,11 @@ item:
 
   - certificate_url: null
     date_end: ""
-    date_start: 2020-10-07
-    description: Achieved 2nd place in CSAW MENA 2020 CTF(Middle East North Africa) after 48h long competition
+    date_start: 2021-11-14
+    description: Achieved 1st place in CSAW MENA 2020 CTF(Middle East North Africa) after 48h long competition
     organization: null
     organization_url: null
-    title: 2nd place CSAW MENA(Middle East North Africa) 2020 (10/2020)
+    title: 1st place CSAW MENA(Middle East North Africa) 2020 (10/2020)
     url: ""
   - certificate_url: null
     date_end: 2020-12-01
